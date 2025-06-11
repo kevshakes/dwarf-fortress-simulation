@@ -1,6 +1,45 @@
-# Dwarf Fortress-Style Simulation
+# 🏰 Dwarf Fortress-Style Simulation
 
-A comprehensive dwarf fortress-style simulation game with procedural world generation, AI-driven dwarf agents, resource management, and multi-layer physics simulation.
+A comprehensive dwarf fortress-style simulation game with **graphical user interface**, procedural world generation, AI-driven dwarf agents, resource management, and multi-layer physics simulation.
+
+## 🎮 NEW: Graphical User Interface!
+
+**Now with a full GUI built with Python Tkinter!**
+
+- **🖥️ Interactive World View**: Click and drag to explore your world
+- **🎛️ Easy Controls**: Buttons, sliders, and menus for all features  
+- **📊 Real-time Status**: Live performance and game statistics
+- **🔧 Visual Debug Tools**: Debug overlays and information panels
+- **💾 GUI Save/Load**: File dialogs for managing save games
+- **⚡ Optimized Performance**: Smooth 60 FPS GUI updates
+
+## 🚀 Quick Start
+
+### Option 1: Universal Launcher (Recommended)
+```bash
+python3 launch.py
+```
+**Automatically detects the best way to run the simulation!**
+
+### Option 2: Direct GUI Launch
+```bash
+python3 main_gui.py
+```
+
+### Option 3: Test GUI First
+```bash
+python3 test_gui.py
+```
+
+### Option 4: Setup & Install Dependencies
+```bash
+python3 setup_gui.py
+```
+
+### Option 5: Original Command Line
+```bash
+python3 main.py --ascii --dwarves 5
+```
 
 ## Features
 
@@ -22,19 +61,63 @@ A comprehensive dwarf fortress-style simulation game with procedural world gener
 - Performance monitoring and statistics
 - CLI commands for debugging and optimization
 
-## Installation
+## 📋 Installation
 
-1. Install Python 3.6+ and required packages:
+### Requirements
+- **Python 3.6+** (with tkinter - usually included)
+- **Optional**: Enhanced features with `pip install -r requirements_gui.txt`
+
+### Quick Setup
 ```bash
-pip install -r requirements.txt
+# Clone the repository
+git clone https://github.com/kevshakes/dwarf-fortress-simulation.git
+cd dwarf-fortress-simulation
+
+# Test GUI components
+python3 test_gui.py
+
+# Run the launcher
+python3 launch.py
 ```
 
-2. Run the simulation:
-```bash
-python main.py
+### Dependencies
+- **Required**: Python 3.6+ with tkinter (standard library)
+- **Optional**: psutil, numpy, colorama (enhanced features)
+- **The simulation works perfectly without optional dependencies!**
+
+## 🖥️ GUI Interface
+
+### Main Window Layout
+```
+┌─────────────────────────────────────────────────────────────┐
+│ File  Simulation  View  Help                    [Menu Bar] │
+├─────────────────────────────────┬───────────────────────────┤
+│                                 │ 🎛️ Controls              │
+│         🗺️ World View          │ • World Generation        │
+│                                 │ • Simulation Controls     │
+│    Interactive map display      │ • View Controls           │
+│    Click and drag to explore    │                           │
+│                                 │ 📊 Status                 │
+│                                 │ • Performance Stats       │
+│                                 │ • Population Info         │
+│                                 │ • Resource Summary        │
+│                                 │                           │
+│                                 │ 🔧 Debug (Optional)       │
+│                                 │ • Debug Toggles           │
+│                                 │ • Real-time Info          │
+├─────────────────────────────────┴───────────────────────────┤
+│ Status: Ready - All systems operational                     │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-## CLI Commands
+### Available Launchers
+- **`launch.py`**: Universal launcher with GUI selection
+- **`main_gui.py`**: Direct GUI application
+- **`test_gui.py`**: GUI component testing
+- **`setup_gui.py`**: Dependency installation helper
+- **`main.py`**: Original command-line version
+
+## 🔧 CLI Commands (Original)
 
 ### Debug Commands
 - `--debug`: Enable debug mode
@@ -50,12 +133,25 @@ python main.py
 - `--generate stress_test`: Create maximum entities for stress testing
 - `--generate benchmark`: Run performance benchmark
 
-## Game Controls
+## 🎮 How to Play
 
-- **WASD**: Move camera
-- **QE**: Change Z-level
-- **R**: Reset camera view
-- **ESC**: Quit simulation
+### GUI Version (Recommended)
+1. **Launch**: Run `python3 launch.py` and select "GUI Version"
+2. **Generate World**: Adjust parameters and click "🌍 Generate World"
+3. **Start Simulation**: Click "▶️ Start" to begin
+4. **Explore**: Use mouse to pan, zoom, and explore your world
+5. **Monitor**: Watch real-time stats in the status panel
+
+### Controls
+- **🖱️ Mouse**: Click tiles, drag to pan, wheel to zoom
+- **⌨️ Keyboard**: WASD to move camera, Q/E for z-levels
+- **🎛️ GUI**: All controls available via buttons and menus
+
+### World Generation Parameters
+- **World Size**: 32x32 to 128x128 tiles
+- **Z-Levels**: 5 to 30 vertical layers  
+- **Dwarves**: 1 to 20 initial population
+- **Debug Mode**: Enable development features
 
 ## Architecture
 

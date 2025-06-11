@@ -1,0 +1,14 @@
+# Core dependencies for Dwarf Fortress Simulation GUI
+# These are optional but recommended for full functionality
+
+# Performance monitoring
+psutil>=5.8.0
+
+# Enhanced noise generation (optional - fallback available)
+numpy>=1.21.0
+
+# Terminal colors (optional)
+colorama>=0.4.4
+
+# Note: tkinter is included with Python standard library
+# No additional GUI dependencies required!
