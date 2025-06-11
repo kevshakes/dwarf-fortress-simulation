@@ -14,11 +14,10 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 try:
     from core.config import GameConfig, Constants
-    from core.game_engine import GameEngine
+    from core.game_engine_gui import GameEngineGUI as GameEngine
     from gui.world_view import WorldView
     from gui.control_panel import ControlPanel
-    from gui.status_panel import StatusPanel
-    from gui.debug_panel import DebugPanel
+    from gui.status_panel import StatusPanel, DebugPanel
 except ImportError as e:
     print(f"Import error: {e}")
     print("Please ensure all dependencies are installed and the project structure is correct.")
